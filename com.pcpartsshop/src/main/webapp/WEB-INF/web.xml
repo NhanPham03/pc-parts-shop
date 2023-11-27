@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+version="3.0">
+  	<display-name>PC Parts Shop</display-name>
+  	
+  	<!-- SERVLETS -->
+  	<servlet>
+		<servlet-name>Home</servlet-name>
+		<jsp-file>/home.jsp</jsp-file>  
+	</servlet>
+	<servlet>
+		<servlet-name>Catalog</servlet-name>
+		<jsp-file>/shopping/catalog.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>Product</servlet-name>
+		<jsp-file>/shopping/product.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>Account</servlet-name>
+		<jsp-file>/user/account.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<jsp-file>/user/login.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>Signup</servlet-name>
+		<jsp-file>/user/signup.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>Cart</servlet-name>
+		<jsp-file>/shopping/cart.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>Invoice</servlet-name>
+		<jsp-file>/shopping/invoice.jsp</jsp-file>
+	</servlet>
+  	
+  	<!-- SERVLET MAPPINGS -->
+  	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Catalog</servlet-name>
+		<url-pattern>/catalog</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Product</servlet-name>
+		<url-pattern>/product</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Account</servlet-name>
+		<url-pattern>/account</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Signup</servlet-name>
+		<url-pattern>/signup</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Cart</servlet-name>
+		<url-pattern>/cart</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Invoice</servlet-name>
+		<url-pattern>/invoice</url-pattern>
+	</servlet-mapping>
+  	
+  	<!-- OTHER CONFIGS -->
+  	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+  	<welcome-file-list>
+		<welcome-file>home.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!-- ERROR PAGES -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error_pages/error_404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>400</error-code>
+		<location>/error_pages/error_400.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/error_pages/error_java.jsp</location>
+	</error-page>
+</web-app>

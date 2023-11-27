@@ -1,0 +1,374 @@
+@charset "UTF-8";
+
+/*
+===== STYLES FOR header.jsp ONLY
+*/
+header {
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	top: 0;
+	z-index: 10;
+	background-color: white;
+}
+.header-logo {
+	margin: 0 8px;
+}
+.header-items {
+	display: flex;
+}
+.header-home, .header-cart, .header-account {
+	margin: 10px 20px;
+	align-self: center;
+}
+.header-search {
+	position: relative;
+	z-index: 9;
+	flex: 1 1 auto;
+	margin: 10px auto;
+	align-items: center;
+	padding: 0 100px 0 20px;
+}
+.input-search {
+	display: inline-block;
+	font-size: 14px;
+	border: 1px solid black;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 8px 15px 8px 15px;
+}
+.button-search {
+	position: absolute;
+	background-color: transparent;
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 8px 15px;
+}
+.button-search:hover {
+	background-color: #e7e7e7;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+
+/*
+===== GENERAL DIV CLASS STYLING
+*/
+.container {
+	display: block;
+	width: 70%;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+.card {
+	background-color: #f2f2f2;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	margin: 10px auto;
+	padding: 20px;
+	text-align: center;
+	font-size: 18px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.separator {
+	border: none;
+	border-top: 2px solid black;
+	flex-grow: 1;
+	margin: 0 20px;
+}
+
+/*
+===== STYLES FOR home.jsp ONLY
+*/
+.home-row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.home-column-left {
+	float: left;
+	width: 20%;
+	padding: 10px;
+}
+.home-column-main {
+	float: left;
+	width: 80%;
+	height: 50px;
+	padding: 10px;
+	text-align-last: center;
+}
+.product-filter {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	white-space: pre;
+	text-align: left;
+	background-color: #f2f2f2;
+	width: 100%;
+	border: 0;
+	padding: 5px;
+	margin: 5px 0;
+}
+.product-filter:hover {
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-thickness: 1.5px;
+}
+.swiper {
+	width: 80%;
+	height: 500px;
+}
+.swiper-slide img {
+	width: 80%;
+	height: 80%;
+}
+.swiper .swiper-button-prev, .swiper .swiper-button-next {
+	color: greenyellow;
+}
+.swiper .swiper-pagination-bullet-active {
+	background-color: greenyellow;
+}
+.banner-button {
+	background-color: #f2f2f2;
+	width: 100%;
+	height: fit-content;
+	border: 0;
+	margin-top: 5px;
+}
+
+/*
+===== STYLES FOR account.jsp, login.jsp, signup.jsp, portal.jsp ONLY
+*/
+.account-container, .portal-container {
+	display: block;
+	width: 40%;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+label, .login-info, .signup-info, .account-info, .portal-info {
+	font-size: 14px;
+	width: 15em;
+	margin-left: 0.5em;
+	margin-bottom: 0.5em;
+}
+.login-info, .signup-info, .account-info, .portal-info {
+	border: 0px solid black;
+	border-radius: 2px;
+	padding: 5px;
+}
+.account-info, .portal-info {
+	margin-right: 3em;
+}
+.form-items {
+	display: flex;
+	text-align: right;
+}
+.form-left, .form-right {
+	width: 50%;
+}
+
+/*
+===== STYLES FOR catalog.jsp ONLY
+*/
+.catalog-row {
+	display: flex;
+	width: 100%;
+	height: fit-content;
+	justify-content: space-evenly;
+	margin-bottom: 10px;
+}
+.catalog-column {
+	width: 30%;
+	height: 100%;
+}
+.catalog-column p {
+	font-size: 15px;
+	color: green;
+}
+.catalog-info {
+	text-align: left;
+	margin-left: 10px;
+}
+.catalog-button {
+	background-color: #f2f2f2;
+	width: 100%;
+	border: 0;
+	margin-top: 5px;
+}
+.catalog-button:hover {
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-thickness: 1.5px;
+}
+.catalog-button img {
+	width: 200px;
+	height: 200px;
+	border: 2px solid black;
+	transition: .4s;
+}
+.catalog-button img:hover {
+	opacity: 50%;
+	cursor: pointer;
+}
+
+/*
+===== STYLES FOR product.jsp ONLY
+*/
+.product-container {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+.product-container img {
+	float: left;
+	width: 200px;
+	height: 200px;
+	margin: 5px 15px 15px 0;
+	border: 2px solid black;
+}
+.product-header h3 {
+	font-family: monospace;
+	color: green;
+}
+.product-body p {
+	font-size: 16px;
+}
+.product-button {
+	background-color: seagreen;
+	color: white;
+	display: block;
+	margin-top: 15px;
+	padding: 12px 25px;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	transition: .4s;
+}
+.product-button:hover {
+	background-color: mediumseagreen;
+	border: 2px solid transparent;
+}
+
+/*
+===== STYLES FOR cart.jsp ONLY
+*/
+#cart-header, #cart-footer {
+	border: none;
+	background-color: transparent;
+	box-shadow: none;
+	padding: 0;
+}
+#cart-footer {
+	text-align-last: right;
+}
+.item-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.item-image {
+	width: 15%;
+	height: fit-content;
+}
+.item-image img {
+	width: 100px;
+	height: 100px;
+	border: 2px solid black;
+}
+.item-name {
+	width: 50%;
+}
+.item-quantity {
+	width: 25%;
+}
+.item-price {
+	width: 10%;
+}
+.item-quantity p, .item-price p {
+	font-size: 18px;
+}
+.item-button {
+	width: 100%;
+	border: 0;
+	margin-top: 5px;
+}
+.item-button:hover {
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-thickness: 1.5px;
+}
+.round-button {
+	background-color: #aaa;
+	color: white;
+	width: 30px;
+	height: 30px;
+	margin: 0 10px;
+	text-align: center;
+	font-weight: 900;
+	border: 0px solid transparent;
+	border-radius: 50%;
+	transition: .4s;
+}
+.round-button:hover {
+	background-color: #ccc;
+	cursor: pointer;
+}
+
+/*
+===== STYLES FOR receipt.jsp ONLY
+*/
+.invoice-container {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+.invoice-container p {
+	font-size: 18px;
+	margin: 2px 0 5px;
+}
+
+/*
+===== STYLES FOR footer.jsp ONLY
+*/
+footer {
+	font-family: 'Times New Roman', Times, serif;
+	margin-top: auto;
+	padding: 10px 0;
+	z-index: 10;
+}
+
+/*
+===== OTHER GENERAL ELEMENT STYLING
+*/
+html, body {
+	font-family: monospace;
+}
+h1, h2, h3 {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0.2em 0.5em 0.5em;
+}
+.warning-text {
+	font-size: 14px;
+	color: red;
+	margin-bottom: 1.3em;
+}
+p {
+	font-size: 12px;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+div {
+	display: block;
+}
+.form-button {
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 5px 15px;
+}
+.form-button:hover {
+	background-color: #e7e7e7;
+}
