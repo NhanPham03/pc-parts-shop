@@ -31,10 +31,10 @@ There are 2 main ways to download and run the application.
 
 ### Things to do after importing project (FOR BOTH METHODS)
 - Configure the Build Path for this project (All the necessary .jar files are located in src/main/webapp/WEB-INF/libs)
-    + Right click on com.pcpartsshop (root) > Build Path > Configure Build Path...
-    + Make sure you are seeing Java Build Path and on the Libraries tab.
-    + Select External JARs > Select all the JARs in the src/.../libs file > Open.
-    + Apply and Close.
+    1. Right click on com.pcpartsshop (root) > Build Path > Configure Build Path...
+    2. Make sure you are seeing Java Build Path and on the Libraries tab.
+    3. Select External JARs > Select all the JARs in the src/.../libs file > Open.
+    4. Apply and Close.
 - Make sure you have downloaded MySQL database and created a database named "pc_parts_shop", if you haven't.
     + Open the MySQL Command Line Client.
     + Input your MySQL password (If you have an account).
@@ -45,14 +45,14 @@ There are 2 main ways to download and run the application.
 - Locate the **persistence.xml** file within the project.
     + Path to .xml file: src/main/resources/META-INF.
     + Change the "user" and "password" values within the file:
-        1. Method 1: Right click > Open With > Generic Text Editor
-        2. Look for the "properties" tag and change the values of
-            * *jakarta.persistence.jdbc.user* to your MySQL account name (Default: root)
-            * *jakarta.persistence.jdbc.password* to your MySQL account password
-        1. Method 2: Double click on persistence.xml
-        2. Select the Source tab on the bottom of the persistence.xml window but above the Console window.
-            * *jakarta.persistence.jdbc.user* to your MySQL account name (Default: root)
-            * *jakarta.persistence.jdbc.password* to your MySQL account password
+        * Method 1: Right click > Open With > Generic Text Editor
+        * Look for the "properties" tag and change the values of
+            - *jakarta.persistence.jdbc.user* to your MySQL account name (Default: root)
+            - *jakarta.persistence.jdbc.password* to your MySQL account password
+        * Method 2: Double click on persistence.xml
+        * Select the Source tab on the bottom of the persistence.xml window but above the Console window.
+            - *jakarta.persistence.jdbc.user* to your MySQL account name (Default: root)
+            - *jakarta.persistence.jdbc.password* to your MySQL account password
 - This step requires Visual Studio Code or any IDE that can read .bat files!
     + Locate the **run-commands.bat** (Found in src/main/webapp/scripts) and open the file.
     + Change the value of **mysql_path** to the path of your mysql.exe (Found in MySQL\MySQL Server (Version)\bin\mysql.exe).
