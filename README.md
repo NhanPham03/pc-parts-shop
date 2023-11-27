@@ -1,4 +1,4 @@
-# PC-Parts-Shop
+# PC Parts Shop (Maven Project)
 
 ## About the web application
 This application is a mock-up website for any computer hardware retailer that uses basic Java Servlets, Java Database Connectivity and Java Persistence API for the application.
@@ -38,7 +38,7 @@ There are 2 main ways to download and run the application.
 - Make sure you have downloaded MySQL database and created a database named "pc_parts_shop", if you haven't.
     + Open the MySQL Command Line Client.
     + Input your MySQL password (If you have an account).
-    + Type the following commands:
+    + Type the following command:
     ```
     create database pc_parts_shop;
     ```
