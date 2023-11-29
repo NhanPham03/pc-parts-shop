@@ -123,7 +123,7 @@ public class ProductDB {
 		return productList;
 	}
 	
-	public static List<Product> searchProductByName(String name) {
+	public static List<Product> filterByName(String name) {
 		EntityManager em = DBUtil.getEmFactory().createEntityManager();
 		String queryString = "SELECT p FROM Product p WHERE p.name LIKE CONCAT('%', :name, '%')";
 		TypedQuery<Product> query = em.createQuery(queryString, Product.class);
@@ -141,52 +141,17 @@ public class ProductDB {
 	}
 	
 	public static int getTotalCount() {
-		EntityManager em = DBUtil.getEmFactory().createEntityManager();
-		String queryString = "SELECT p FROM Product p";
-		TypedQuery<Product> query = em.createQuery(queryString, Product.class);
-		
-		List<Product> productList = new ArrayList<>();
-		try {
-			productList = query.getResultList();
-		} catch (NoResultException ex) {
-			System.out.println(ex);
-		} finally {
-			em.close();
-		}
+		List<Product> productList = selectAllProducts();
 		return productList.size();
 	}
 	
 	public static int getCountOfType(String type) {
-		EntityManager em = DBUtil.getEmFactory().createEntityManager();
-		String queryString = "SELECT p FROM Product p WHERE p.type = :type";
-		TypedQuery<Product> query = em.createQuery(queryString, Product.class);
-		query.setParameter("type", type);
-		
-		List<Product> productList = new ArrayList<>();
-		try {
-			productList = query.getResultList();
-		} catch (NoResultException ex) {
-			System.out.println(ex);
-		} finally {
-			em.close();
-		}
+		List<Product> productList = filterByType(type);
 		return productList.size();
 	}
 	
 	public static int getCountOfName(String name) {
-		EntityManager em = DBUtil.getEmFactory().createEntityManager();
-		String queryString = "SELECT p FROM Product p WHERE p.name LIKE CONCAT('%', :name, '%')";
-		TypedQuery<Product> query = em.createQuery(queryString, Product.class);
-		query.setParameter("name", name.toLowerCase());
-		
-		List<Product> productList = new ArrayList<>();
-		try {
-			productList = query.getResultList();
-		} catch (NoResultException ex) {
-			System.out.println(ex);
-		} finally {
-			em.close();
-		}
+		List<Product> productList = filterByName(name);
 		return productList.size();
 	}
 	

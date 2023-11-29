@@ -85,7 +85,7 @@ public class CatalogController extends HttpServlet {
 		int productCount = ProductDB.getCountOfName(q);
 		request.setAttribute("productCount", productCount);
 		
-		String catalogResult = SQLUtil.getProductCatalog(ProductDB.searchProductByName(q));
+		String catalogResult = SQLUtil.getProductCatalog(ProductDB.filterByName(q));
 		request.setAttribute("catalogResult", catalogResult);
 		url = "/catalog";
 		
