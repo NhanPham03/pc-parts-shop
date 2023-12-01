@@ -6,6 +6,16 @@ This application is a mock-up website for any computer hardware retailer that us
 The entire project is made using ***Apache Maven*** and tested on ***Eclipse IDE for Enterprise Java and Web Developers*** with ***MySQL database***.
 To make sure this web application runs smoothly, it is recommended to run using the aforementioned tools.
 
+You can access the website at: https://pcpartsshop.onrender.com/com.pcpartsshop/
+
+### NOTES WHEN ACCESSING WEBSITE
+The first time accessing this website might take a long time loading.
+> PC Parts Shop is hosted on Render's Free plan, therefore many resources are limited and slowed down when inactive.
+
+You might run into an error (#1040): Too many connections, when performing any actions on the website.
+This is due to the web application connecting to a FREE hosting service, hence the number of concurrent connections are limited, which will cause the website to crash the first time.
+> Please wait for 30 seconds to 1 minute and do the same thing you tried before the error, the website should run normally by then.
+
 # How to run
 There are 2 main ways to download and run the application.
 
