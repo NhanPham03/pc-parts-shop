@@ -1,4 +1,4 @@
-FROM tomcat:8.5-jdk8-openjdk
+FROM tomcat:9.0-jdk11-openjdk
 
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
