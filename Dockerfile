@@ -6,7 +6,7 @@ RUN rm -rf /usr/local/tomcat/webapps/examples
 ADD com.pcpartsshop.war /usr/local/tomcat/webapps/
 
 # Add your context.xml file
-COPY /etc/secret/context.xml /usr/local/tomcat/conf/
+COPY context.xml /usr/local/tomcat/conf/
 
 EXPOSE 8000
 CMD ["catalina.sh", "run"]
