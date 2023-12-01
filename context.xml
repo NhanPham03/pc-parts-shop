@@ -26,5 +26,5 @@
     <!--
     <Manager pathname="" />
     -->
-    <Resource name="jdbc/pc_parts_shop" auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12666342?autoReconnect=true" username="${DB_USERNAME}" password="${DB_PASSWORD}" maxActive="100" maxIdle="30" maxWait="10000" logAbandoned="true" removeAbandoned="true" removeAbandonedTimeout="60" type="javax.sql.DataSource" />
+    <Resource name="jdbc/pc_parts_shop" auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12666342?autoReconnect=true" username="${DB_USERNAME}" password="${DB_PASSWORD}" maxTotal="100" maxIdle="30" maxWaitMillis="10000" logAbandoned="true" removeAbandonedOnBorrow="true" removeAbandonedOnMaintenance="true" removeAbandonedTimeout="60" type="javax.sql.DataSource" />
 </Context>
