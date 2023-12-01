@@ -11,9 +11,9 @@
 		
 		<properties>
 			<property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-			<property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/pc_parts_shop" />
-			<property name="jakarta.persistence.jdbc.user" value="root" />
-			<property name="jakarta.persistence.jdbc.password" value="12345" />
+			<property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12666342" />
+			<property name="jakarta.persistence.jdbc.user" value="sql12666342" />
+			<property name="jakarta.persistence.jdbc.password" value="8a4djYwLA8" />
 			<property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
 		</properties>
 	</persistence-unit>
