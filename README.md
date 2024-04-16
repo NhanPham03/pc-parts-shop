@@ -9,21 +9,23 @@ To make sure this web application runs smoothly, it is recommended to run using 
 You can access the website on: [Render](https://pcpartsshop.onrender.com/com.pcpartsshop/)
 
 ## Table of Contents
-- [NOTES](#notes-for-accessing-website)
-- [HOW TO RUN](#how-to-run)
+- [Notes](#notes-for-accessing-render)
+- [How to run](#how-to-run)
     - [Download prerequisites](#download-prerequisites)
     - [Install dependencies](#install-dependencies)
     - [Setting up environment](#setting-up-environment)
 - [Known problems](#known-problems)
 
-## NOTES FOR ACCESSING WEBSITE
+## Notes for accessing Render
 ### The first time accessing this website will take a long time to load.
 > PC Parts Shop is hosted on Render's Free plan, therefore resources are limited and slowed down when inactive.
 
 ### When accessing the website 1-2 months AFTER it's been updated, you might encounter lots of 404 errors when browsing items.
 > The service that is hosting the MySQL database has been _powered down_ as this project only serves as a college project and has no commercial use.
 
-# HOW TO RUN
+# How to run
+These steps are a MUST, the project will encounter errors otherwise!
+
 ## Download prerequisites
 Install MySQL at: https://dev.mysql.com/downloads/installer/  
 Install Apache Tomcat at: https://tomcat.apache.org/
