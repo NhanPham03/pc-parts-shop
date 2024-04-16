@@ -99,10 +99,10 @@ set password=your_password
 > Please check if you have followed every step above!
 
 ### Why can't my project access the database even though I have set up the "persistence.xml" correctly?
-> Go to Project Explorer > Servers > Tomcat vX.X Server at localhost-config > context.xml > Open With > Generic Text Editor
-> Change the "url" `HOST` (localhost or 127.0.0.1), `PORT` (Default: 3306)
-> Change the `username` and `password` values
-> Then insert the tags below in between `<Context>`
+> Go to Project Explorer > Servers > Tomcat vX.X Server at localhost-config > context.xml > Open With > Generic Text Editor  
+> Change the "url" `HOST` (localhost or 127.0.0.1), `PORT` (Default: 3306)  
+> Change the `username` and `password` values  
+> Then insert the tags below in between `<Context>`  
 ```
 <Resource name="jdbc/pc_parts_shop" auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" 
 url="jdbc:mysql://HOST:PORT/pc_parts_shop?autoReconnect=true" 
