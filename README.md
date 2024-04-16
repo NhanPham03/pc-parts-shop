@@ -25,7 +25,7 @@ You can access the website on: [Render](https://pcpartsshop.onrender.com/com.pcp
 
 # HOW TO RUN
 ## Download prerequisites
-Install MySQL at: https://dev.mysql.com/downloads/installer/
+Install MySQL at: https://dev.mysql.com/downloads/installer/  
 Install Apache Tomcat at: https://tomcat.apache.org/
 
 ### Cloning the repository
