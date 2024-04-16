@@ -43,7 +43,7 @@ _If you choose not to clone the repository_
 - Make sure you have **Apache Maven** (Project type, not needed for Eclipse users)  
 *(Apache Tomcat preferred version: 8.0+)*
 - Download **com.pcpartsshop.war** file.
-- Open Eclipse IDE and select File > Import > Web > WAR file.
+- Open Eclipse IDE and select `File > Import > Web > WAR file`.
 - Select the path to the **com.pcpartsshop.war** file and press Finish.
 
 ## Install dependencies
