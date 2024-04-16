@@ -33,7 +33,7 @@ Install Apache Tomcat at: https://tomcat.apache.org/
 *(Apache Tomcat preferred version: 8.0+)*
 - To clone the repository, simply press the `Code` button and copy the link.
 - Then open the Terminal (or Windows PowerShell) at the desired location to clone this repo.
-- Run: `git clone https://github.com/NhanPham03/pc-parts-shop-java.git`
+- Run `git clone https://github.com/NhanPham03/pc-parts-shop-java.git`
 - Open the Maven project in Eclipse (Or any desired IDE).
 
 ### Download the WAR file
@@ -53,7 +53,7 @@ _If you choose not to clone the repository_
 
 ### Create the Database
 1. Open the MySQL Command Line Client and log in to your account.
-2. Run: `create database pc_parts_shop;` (Don't forget the semicolon!)
+2. Run `create database pc_parts_shop;` (Don't forget the semicolon!)
 
 ## Setting up environment
 ### Modify persistence.xml
@@ -85,7 +85,7 @@ set password=your_password
     + Navigate to Account.
     + Try to log in (It might throw an error).
     + Open MySQL Command Line Client.
-    + Run:
+    + Run
     ```
     use pc_parts_shop;
 
