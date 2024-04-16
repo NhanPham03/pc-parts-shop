@@ -1,9 +1,9 @@
-# PC Parts Shop (Maven Project)
+# PC Parts Shop (Java)
 
 PC Parts Shop is a mock-up website for any computer hardware retailer.
 This web application uses basic Java Servlets, Java Database Connectivity and Java Persistence API.
 
-The entire project is made using **Apache Maven** and tested on **Eclipse IDE for Enterprise Java and Web Developers** with **MySQL database**.
+The entire **Apache Maven** project is made and tested on **Eclipse IDE for Enterprise Java and Web Developers** with **MySQL database**.
 To make sure this web application runs smoothly, it is recommended to run using the aforementioned tools.
 
 You can access the website on: [Render](https://pcpartsshop.onrender.com/com.pcpartsshop/)
