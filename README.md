@@ -29,7 +29,7 @@ Install MySQL at: https://dev.mysql.com/downloads/installer/
 Install Apache Tomcat at: https://tomcat.apache.org/
 
 ### Cloning the repository
-- Make sure you have **Apache Maven** (Project type, not needed for Eclipse users) and **Apache Tomcat** (Server) installed!
+- Make sure you have **Apache Maven** (Project type, not needed for Eclipse users)  
 *(Apache Tomcat preferred version: 8.0+)*
 - To clone the repository, simply press the `Code` button and copy the link.
 - Then open the Terminal (or Windows PowerShell) at the desired location to clone this repo.
@@ -38,7 +38,7 @@ Install Apache Tomcat at: https://tomcat.apache.org/
 
 ### Download the WAR file
 _If you choose not to clone the repository_
-- Make sure you have **Apache Maven** (Project type, not needed for Eclipse users) and **Apache Tomcat** (Server) installed!
+- Make sure you have **Apache Maven** (Project type, not needed for Eclipse users)  
 *(Apache Tomcat preferred version: 8.0+)*
 - Download **com.pcpartsshop.war** file.
 - Open Eclipse IDE and select File > Import > Web > WAR file.
