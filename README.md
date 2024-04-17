@@ -1,13 +1,13 @@
 # PC Parts Shop (Java)
 
-![Apache Maven](https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)  
+[![Apache Maven](https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/)
+[![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)  
 
-PC Parts Shop is a mock-up website for any computer hardware retailer.
-This web application uses basic Java Servlets, Java Database Connectivity and Java Persistence API.
+PC Parts Shop is a mock-up website for any computer hardware retailer.  
+This web application uses basic Java Servlets, Java Database Connectivity and Java Persistence API.  
 
-The entire **Apache Maven** project is made and tested on **Eclipse IDE for Enterprise Java and Web Developers** with **MySQL database**.
-To make sure this web application runs smoothly, it is recommended to run using the aforementioned tools.
+The entire **Apache Maven** project is made and tested on **Eclipse IDE for Enterprise Java and Web Developers** with **MySQL database**.  
+To make sure this web application runs smoothly, it is recommended to run using the aforementioned tools.  
 
 You can access the website on:  
 [![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://pcpartsshop.onrender.com/com.pcpartsshop/)
