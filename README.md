@@ -40,15 +40,7 @@ Install Apache Tomcat at: https://tomcat.apache.org/
 - To clone the repository, simply press the `Code` button and copy the link.
 - Then open the Terminal (or Windows PowerShell) at the desired location to clone this repo.
 - Run `git clone https://github.com/NhanPham03/pc-parts-shop-java.git`
-- Open the Maven project in Eclipse (Or any desired IDE).
-
-### Download the WAR file
-_If you choose not to clone the repository_
-- Make sure you have **Apache Maven** (Project type, not needed for Eclipse users)  
-*(Apache Tomcat preferred version: 8.0+)*
-- Download **com.pcpartsshop.war** file.
-- Open Eclipse IDE and select `File > Import > Web > WAR file`.
-- Select the path to the **com.pcpartsshop.war** file and press Finish.
+- Open the project in Eclipse IDE for Enterprise Java and Web Developers.
 
 ## Install dependencies
 ### All the necessary .jar files are located in src/main/webapp/WEB-INF/libs
