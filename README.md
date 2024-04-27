@@ -116,10 +116,10 @@ Don't forget to check [this section](#known-problems) if you happen to run into 
 **NOTE**: If Smart Tomcat configurations are all blank, proceed past step 1.
 1. Go to `Run/Debug Configurations > Add Smart Tomcat` (At this step, the Tomcat server should automatically configure itself).
 2. Tomcat Server: Extract and Select the `Apache Tomcat`'s root directory from the .zip.
-3. Catalina base: Select `C:\Users\<Your user>\.SmartTomcat\com.pcpartsshop\com.pcpartsshop`.
-4. Deployment Directory: Select `com.pcpartsshop/src/main/webapp`.
-5. Use classpath of module: Select `com.pcpartsshop`.
-6. Context path: `/pcpartsshop`.
+3. Catalina base: Select `C:\Users\<Your user>\.SmartTomcat\com.pcpartsshop\com.pcpartsshop`.  
+4. Deployment Directory: Select `com.pcpartsshop/src/main/webapp`.  
+5. Use classpath of module: Select `com.pcpartsshop`.  
+6. Context path: `/pcpartsshop`.  
 If you can't select classpath of module, `Right click on the project's root directory > Run Maven > Reimport > Retry select module`.
 
 ### Modify batch script
