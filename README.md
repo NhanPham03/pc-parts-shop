@@ -31,16 +31,15 @@ You can access the website on:
 These steps are a MUST, the project will encounter errors otherwise!
 
 ## Download prerequisites
-Install MySQL at: https://dev.mysql.com/downloads/installer/  
-Install Apache Tomcat at: https://tomcat.apache.org/
+Install MySQL database at: https://dev.mysql.com/downloads/installer/  
+Download and Extract Apache Maven *(Preferred version: 3.9.5+)* from: https://maven.apache.org/download.cgi  
+Download and Extract Apache Tomcat *(Preferred version: 8.0+)* from: https://tomcat.apache.org/
 
 ### Cloning the repository
-- Make sure you have **Apache Maven** (Project type, not needed for Eclipse users)  
-*(Apache Tomcat preferred version: 8.0+)*
 - To clone the repository, simply press the `Code` button and copy the link.
-- Then open the Terminal (or Windows PowerShell) at the desired location to clone this repo.
-- Run `git clone https://github.com/NhanPham03/pc-parts-shop-java.git`
-- Open the project in Eclipse IDE for Enterprise Java and Web Developers.
+- Then open the Terminal (or Windows PowerShell) at the desired location to clone this project.
+- Run `git clone https://github.com/NhanPham03/pc-parts-shop-java.git`.
+- Open the project in your preferred IDE.
 
 ## Install dependencies
 ### All the necessary .jar files are located in src/main/webapp/WEB-INF/libs
@@ -55,7 +54,7 @@ Install Apache Tomcat at: https://tomcat.apache.org/
 
 ## Setting up environment
 ### Modify persistence.xml
-- Locate the `persistence.xml` (src/main/resources/META-INF)
+- Locate the `persistence.xml` (src/main/resources/META-INF).
 - Look for the "properties" tag and change the values of:
     + *jakarta.persistence.jdbc.user* to your MySQL username (Default: root)
     + *jakarta.persistence.jdbc.password* to your MySQL password
@@ -97,13 +96,31 @@ set password=your_password
 > Please check if you have followed every step above!
 
 ### Why can't my project access the database even though I have set up the "persistence.xml" correctly?
-> Go to `Project Explorer > Servers > Tomcat vX.X Server at localhost-config > context.xml > Open With > Generic Text Editor`  
-> Change the "url" `HOST` (localhost or 127.0.0.1), `PORT` (Default: 3306)  
-> Change the `username` and `password` values  
-> Then insert the tags below in between `<Context>`  
+> Go to `Project Explorer > Servers > Tomcat vX.X Server at localhost-config > context.xml > Open With > Generic Text Editor`.  
+> Change the "url" `HOST` (localhost or 127.0.0.1), `PORT` (Default: 3306).  
+> Change the `username` and `password` values.  
+> Then insert the tags below in between `<Context>`.  
 ```
 <Resource name="jdbc/pc_parts_shop" auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" 
 url="jdbc:mysql://HOST:PORT/pc_parts_shop?autoReconnect=true" 
 username="USERNAME" password="PASSWORD" 
 maxActive="100" maxIdle="30" maxWait="10000" logAbandoned="true" removeAbandoned="true" removeAbandonedTimeout="60" type="javax.sql.DataSource" />
+```
+
+### If you encounter either of these errors:
+- org.apache.jasper.JasperException: org.apache.jasper.JasperException: Failed to load or instantiate TagLibraryValidator class: [org.apache.taglibs.standard.tlv.JstlCoreTLV]
+- org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.home_jsp
+> Make sure you have already added the necessary libraries located in src/main/webapp/WEB-INF/libs.
+> Locate the `pom.xml` file (src/main/webapp/WEB-INF).
+> Add `<scope>` tags with `provided` value to **ALL** dependencies.
+```
+<dependencies>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>3.8.1</version>
+        <scope>provided</scope>
+    </dependency>
+    ...
+</dependencies>
 ```
