@@ -110,9 +110,9 @@ maxActive="100" maxIdle="30" maxWait="10000" logAbandoned="true" removeAbandoned
 ### If you encounter either of these errors:
 - org.apache.jasper.JasperException: org.apache.jasper.JasperException: Failed to load or instantiate TagLibraryValidator class: [org.apache.taglibs.standard.tlv.JstlCoreTLV]
 - org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.home_jsp
-> Make sure you have already added the necessary libraries located in src/main/webapp/WEB-INF/libs.
-> Locate the `pom.xml` file (src/main/webapp/WEB-INF).
-> Add `<scope>` tags with `provided` value to **ALL** dependencies.
+> Make sure you have already added the necessary libraries located in src/main/webapp/WEB-INF/libs.  
+> Locate the `pom.xml` file (src/main/webapp/WEB-INF).  
+> Add `<scope>` tags with `provided` value to **ALL** dependencies.  
 ```
 <dependencies>
     <dependency>
