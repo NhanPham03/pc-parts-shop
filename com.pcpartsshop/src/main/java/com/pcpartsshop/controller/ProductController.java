@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import com.pcpartsshop.business.Product;
 import com.pcpartsshop.data.ProductDB;
 
+
 @WebServlet("/productHandler")
 public class ProductController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -16,7 +17,7 @@ public class ProductController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String requestURI = request.getRequestURI();
 		String url = null;
-		
+
 		if (requestURI.endsWith("/productHandler")) {
 			url = displayProduct(request, response);
 		}
@@ -27,13 +28,13 @@ public class ProductController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
-	
+
 	private String displayProduct(HttpServletRequest request, HttpServletResponse response) {
 		String productID = request.getParameter("productID");
 		String url = null;
-		
+
 		Product product = ProductDB.selectProductByID(productID);
-		
+
 		if (product != null) {
 			request.setAttribute("product", product);
 			request.setAttribute("type", product.getType().toLowerCase());
