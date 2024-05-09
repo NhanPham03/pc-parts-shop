@@ -17,11 +17,11 @@ public class CSPFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        // Filter initialization logic goes here
+
     }
 
     @Override
     public void destroy() {
-        // Filter cleanup logic goes here
+
     }
 }

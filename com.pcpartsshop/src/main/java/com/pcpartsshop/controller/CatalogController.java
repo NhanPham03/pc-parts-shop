@@ -1,6 +1,9 @@
 package com.pcpartsshop.controller;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Enumeration;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.WebServlet;
@@ -12,9 +15,35 @@ import org.apache.commons.text.StringEscapeUtils; // Import Apache Commons Text
 @WebServlet("/catalogHandler")
 public class CatalogController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static final List<String> ALLOWED_PARAMS =
+			Arrays.asList("CPU", "GPU", "RAM", "Motherboard", "Storage", "Case", "PSU", "Monitor", "Keyboard", "Mouse", "Headset");
 
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		// Validate the params
+		Enumeration<String> parameterNames = request.getParameterNames();
+
+		while (parameterNames.hasMoreElements()) {
+			String paramName = parameterNames.nextElement();
+
+			// Validate the parameter name
+			if (!ALLOWED_PARAMS.contains(paramName)) {
+				throw new ServletException("Invalid parameter: " + paramName);
+			}
+
+			String[] paramValues = request.getParameterValues(paramName);
+
+			// Validate the parameter values
+			for (String paramValue : paramValues) {
+				if (!isValid(paramValue)) {
+					throw new ServletException("Invalid parameter value: " + paramValue);
+				}
+			}
+		}
+
+
+		// Process the parameters...
 		String requestURI = request.getRequestURI();
 		String action = null;
 		String url = null;
@@ -94,4 +123,10 @@ public class CatalogController extends HttpServlet {
 
 		return url;
 	}
+
+	private boolean isValid(String paramValue) {
+		// Check if the value is alphanumeric and does not contain any special characters
+		return paramValue.matches("[a-zA-Z0-9]*");
+	}
+
 }
