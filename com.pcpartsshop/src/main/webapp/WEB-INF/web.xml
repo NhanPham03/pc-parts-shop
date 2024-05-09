@@ -10,7 +10,7 @@ version="3.0">
   	<!-- SERVLETS -->
   	<servlet>
 		<servlet-name>Home</servlet-name>
-		<jsp-file>/home.jsp</jsp-file>  
+		<jsp-file>/home.jsp</jsp-file>
 	</servlet>
 	<servlet>
 		<servlet-name>Catalog</servlet-name>
@@ -77,12 +77,31 @@ version="3.0">
   	
   	<!-- OTHER CONFIGS -->
   	<session-config>
-		<session-timeout>30</session-timeout>
+		<session-timeout>60</session-timeout>
 	</session-config>
   	<welcome-file-list>
 		<welcome-file>home.jsp</welcome-file>
 	</welcome-file-list>
-	
+
+	<!-- FILTER SETTING -->
+	<filter>
+		<filter-name>CSPFilter</filter-name>
+		<filter-class>com.pcpartsshop.controller.CSPFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CSPFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>clickjackingFilter</filter-name>
+		<filter-class>com.pcpartsshop.util.clickjackingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>clickjackingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
 	<!-- ERROR PAGES -->
 	<error-page>
 		<error-code>404</error-code>
