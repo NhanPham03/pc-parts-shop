@@ -1,5 +1,7 @@
 # PC Parts Shop (Java)
 
+### This repository has been archived and will no longer be updated.
+
 [![Apache Maven](https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/)
 [![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)  
 
@@ -10,7 +12,7 @@ The entire **Apache Maven** project is made and tested on **Eclipse IDE for Ente
 To make sure this web application runs smoothly, it is recommended to run using the aforementioned programs.  
 
 You can access the website on:  
-[![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://pcpartsshop.onrender.com/com.pcpartsshop/)
+[![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)]()
 
 ## Table of Contents
 - [Notes](#notes-for-accessing-render)
